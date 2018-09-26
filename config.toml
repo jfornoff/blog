@@ -1,0 +1,76 @@
+baseurl = "https://blog.janfornoff.com/"
+title = "Jan Fornoff"
+theme = "ghostwriter"
+languageCode = "en-us"
+copyright = "Jan Fornoff"
+googleAnalytics = "UA-108130751-1"
+disqusShortname = "jfornoff-blog"
+
+[Privacy]
+
+[Privacy.disqus]
+    disable = true
+
+[Privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = false
+
+[Author]
+    name = "Jan Fornoff"
+    profile = ""
+
+[Taxonomies]
+    tag = "tags"
+
+[Params]
+    intro = true
+    headline = "Tales of things."
+    description = ""
+    github = "https://github.com/jfornoff"
+    gitlab = ""
+    linkedin = "https://linkedin.com/in/jan-fornoff/"
+    gplus = ""
+    twitter = "https://twitter.com/JanFornoff"
+    stackoverflow = "https://stackoverflow.com/users/3274024/jfornoff"
+    email = "janfornoff@gmail.com"
+    opengraph = true
+    shareTwitter = true
+    shareFacebook = true
+    shareGooglePlus = false
+    shareLinkedIn = true
+    dateFormat = "Mon, Jan 2, 2006"
+    highlightJsUrl = ""
+    highlightJsLocalUrl = "/assets/js/highlight.pack.js"
+    exponeaJsUrl = ""
+    exponeaTarget = ""
+    exponeaToken = ""
+    exponeaTrackVisits = false
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Projects"
+    url = "/project/"
+    weight = 2
+
+[[menu.main]]
+    name = "Contact"
+    url = "/page/contact/"
+    weight = 3
+
+[[menu.main]]
+    name = "About"
+    url = "/page/about/"
+    weight = 4
+
+[[menu.main]]
+    name = "CV"
+    url = "http://cv.janfornoff.com"
+    weight = 5

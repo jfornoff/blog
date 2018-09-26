@@ -1,0 +1,91 @@
+---
+categories:
+- elixir
+date: "2017-10-28T10:15:04Z"
+title: Mix xref to the rescue!
+---
+
+[Last week]({% post_url 2017-10-21-getting-started-with-mix-format %}), i told you about the soon-included code formatter in the standard Elixir build tool [**Mix**](https://hexdocs.pm/mix/Mix.html).
+
+Today, we're continuing our journey into the amazing things that Mix can do for you.
+There will be three features that I'm going to spotlight, just skip over whatever section
+if you already know it. This is a __What the hell, this is a thing? How do I use that?__ type of post.
+
+## Short intro to mix xref
+`mix xref` is a task that is able to analyze relationships between your Elixir modules.
+Sounds really boring, huh? It does. Let me show you why it's actually amazing.
+
+## Finding dead end function calls
+
+Did you ever fat finger a function name, run the code and get greeted with:
+**HEY I'M YOUR RUNTIME ENVIRONMENT AND I TOTALLY CAN'T FIND THE THING THAT WE'RE TRYING TO CALL HERE**?
+
+This also assumes that you're actually running the code locally (hope you have a good test suite that exercises your code base, otherwise... I feel sorry for you.) before shipping it. Anyways, besides the point. Imagine a world, where your compiler could tell you exactly that this is not going to work, quickly and for your entire code base!
+
+Meet `mix xref unreachable`.
+
+Assume the following project.
+
+{{< highlight elixir >}}
+defmodule Greeter do
+  def hello(name) do
+    IO.put "Hello #{name}"
+  end
+end
+{{< /highlight >}}
+
+Eagle eye, can you spot the error? Did you make one like these before? I have.
+
+Now let's see if we can get some feedback from our nice buildtool.
+{{< highlight shell >}}
+$ mix xref unreachable
+lib/foo.ex:3: IO.put/1
+{{< /highlight >}}
+
+
+That's the short, machine-readable version (imagine if your editor would run this automatically and show you an indicator in the code whenever something like this happens! Hmm...)
+
+{{< highlight shell >}}
+$ mix xref warnings
+warning: function IO.put/1 is undefined or private. Did you mean one of:
+
+      * puts/1
+      * puts/2
+
+  lib/foo.ex:3
+{{< /highlight >}}
+
+Ever wondered how these warnings are generated when you compile all your code? Yup. From this `mix` task.
+
+## Running only the tests you care about
+
+Programming efficiently is a lot about feedback loops. The quicker you find out that
+the code you are currently writing does not quite do what you think it does, the quicker
+you can move on with your life.
+
+Here comes `mix test --stale`.
+It works by keeping track of changes in your code since the last test run and determining the tests that could have been possibly impacted. Then it just runs those.
+
+This become especially important when your test suite grows, maybe even spanning multiple sub-applications in an Umbrella app. It's already well supported in TDD workflow tools such as [mix test.watch](https://github.com/lpil/mix-test.watch), which supports a `--stale` flag.
+
+## Where's that function used?
+
+Ever stumbled upon a function that you really wondered what it does? Chances are that you'd be interested in where it is used, to figure out what parts of the code base are using it - to get some context.
+
+It's a lot like __Jump to Definition__, just the other way around!
+
+
+{{< highlight shell >}}
+$ mix xref callers Kernel.==/2
+lib/example/compare.ex:84: Kernel.==/2
+{{< /highlight >}}
+
+Neat! If you think this example is contrived, consider that you're upgrading to a new major version of your favorite library and they changed some naming around. Run `callers` for the renamed function or module, walk through the call sites and make the necessary change. As soon `callers` says you're clear, no need to wonder - **can I commit this or do i need to double check again?**
+
+## Conclusion
+I'll let you go now. Hope this post taught you something about how Mix can make your life easier or showed you a cool use of `xref`.
+
+Until next time.
+
+**P.S.** Be aware that `mix xref` is also able to output **all** the relationships between your application modules (e.g. in graphical format) - it'll come back to you in case you ever need it.
+
