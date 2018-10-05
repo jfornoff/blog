@@ -1,8 +1,8 @@
 ---
-categories:
-- elixir
 date: "2017-10-21T10:13:25Z"
 title: Getting started with mix format
+tags:
+- elixir
 ---
 
 ## What's code formatting and why do we care?

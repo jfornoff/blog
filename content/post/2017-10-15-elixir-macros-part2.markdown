@@ -2,6 +2,8 @@
 date: "2017-10-15T10:07:32Z"
 title: Elixir Macros Part 2 - How to find out what's going on
 url: /elixir-macros-2
+tags:
+- elixir
 ---
 
 In [part 1]({% post_url 2017-10-03-elixir-macros-part1 %}), we looked into how Elixir macros work and how they allow us to **write code that writes code**, as many say.

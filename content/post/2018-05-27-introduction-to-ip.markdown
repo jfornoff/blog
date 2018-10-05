@@ -1,8 +1,8 @@
 ---
-categories:
-- networking
 date: "2018-05-27T19:05:48Z"
 title: Introduction to the Internet Protocol
+tags:
+- networking
 ---
 
 The Internet Protocol (IP) is a crucial underpinning of the Internet as we take it for granted nowadays.

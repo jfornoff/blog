@@ -2,6 +2,8 @@
 date: "2017-10-03T11:59:53Z"
 title: Elixir Macros Part 1 - How they work
 url: /elixir-macros-1
+tags:
+- elixir
 ---
 
 **TL;DR** Elixir is nice. Macros enable you to create a concise language for the application problem domain without applying magic.

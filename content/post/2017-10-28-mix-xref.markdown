@@ -1,8 +1,8 @@
 ---
-categories:
-- elixir
 date: "2017-10-28T10:15:04Z"
 title: Mix xref to the rescue!
+tags:
+- elixir
 ---
 
 [Last week]({% post_url 2017-10-21-getting-started-with-mix-format %}), i told you about the soon-included code formatter in the standard Elixir build tool [**Mix**](https://hexdocs.pm/mix/Mix.html).
