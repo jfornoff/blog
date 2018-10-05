@@ -2,23 +2,24 @@
 {{ $styleCSS := $styleSass | resources.ToCSS }}
 <link rel="stylesheet" href="{{$styleCSS.Permalink}}" media="all">
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script>
 window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#4b4b4b",
-      "text": "#ffffff"
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#4b4b4b",
+        "text": "#ffffff"
+      },
+      "button": {
+        "background": "#f24040",
+        "text": "#ffffff"
+      }
     },
-    "button": {
-      "background": "#f24040",
-      "text": "#ffffff"
+    "theme": "edgeless",
+    "content": {
+      "message": "I use Google Analytics, this uses cookies. Is this okay?"
     }
-  },
-  "theme": "edgeless",
-  "content": {
-    "message": "I use Google Analytics, this uses cookies. Is this okay?"
-  }
-})});
+  })
+});
 </script>
