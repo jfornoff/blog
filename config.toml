@@ -9,7 +9,7 @@ disqusShortname = "jfornoff-blog"
 [Privacy]
 
 [Privacy.disqus]
-    disable = true
+    disable = false
 
 [Privacy.googleAnalytics]
     anonymizeIP = true
