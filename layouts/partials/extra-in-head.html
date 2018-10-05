@@ -1,6 +1,6 @@
-{{ $styleSass := resources.Get "main.scss" }}
-{{ $styleCSS := $styleSass | resources.ToCSS }}
-<link rel="stylesheet" href="{{$styleCSS.Permalink}}" media="all">
+{{ with resources.Get "main.scss" | toCSS }}
+<style>{{.Content | safeCSS}}</style>
+{{ end }}
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script defer src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script>
