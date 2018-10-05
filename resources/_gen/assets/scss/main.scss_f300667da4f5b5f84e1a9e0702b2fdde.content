@@ -71,5 +71,8 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 .hljs-strong {
   font-weight: bold; }
 
-.body {
-  background-color: red; }
+h2, h3 {
+  margin-top: 2.5rem; }
+
+p {
+  margin: 0 0 20px; }
