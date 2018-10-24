@@ -3,6 +3,8 @@ date: "2017-10-21T10:13:25Z"
 title: Getting started with mix format
 tags:
 - elixir
+aliases:
+- /elixir/2017/10/21/getting-started-with-mix-format.html
 ---
 
 ## What's code formatting and why do we care?

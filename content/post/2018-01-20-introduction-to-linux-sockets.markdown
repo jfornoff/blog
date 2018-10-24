@@ -3,6 +3,8 @@ date: "2018-01-20T11:14:58Z"
 title: Introduction to Linux sockets
 tags:
 - networking
+aliases:
+- /networking/2018/01/20/introduction-to-linux-sockets.html
 ---
 
 This post will cover a little bit about the abstraction of a Socket in Linuxworld, what they exactly are and how they are generally used.

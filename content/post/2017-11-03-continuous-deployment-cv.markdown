@@ -3,6 +3,8 @@ date: "2017-11-03T18:18:37Z"
 title: Continuous deployment for your CV
 tags:
 - automation
+aliases:
+- /2017/11/03/continuous-deployment-cv.html
 ---
 
 The goal of today's post is to get a little whiff of Continuous Deployment,

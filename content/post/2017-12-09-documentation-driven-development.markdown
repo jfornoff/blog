@@ -1,6 +1,8 @@
 ---
 date: "2017-12-09T10:42:34Z"
 title: Documentation Driven Development - or why names matter
+aliases:
+- /2017/12/09/documentation-driven-development.html
 ---
 
 Today's post will be a pitch for why you should be sensitive to how you refer to

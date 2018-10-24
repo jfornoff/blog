@@ -2,6 +2,8 @@
 layout: page
 title: Projects
 permalink: /projects/
+aliases:
+- /projects/
 ---
 
 # [Multiplayer TicTacToe](https://tictactoe-elm.herokuapp.com/)

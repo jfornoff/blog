@@ -5,6 +5,9 @@ date: "2018-02-19T06:59:49Z"
 title: 'Book Notes: "A Guide to the Good Life"'
 tags:
 - booknotes
+- on-life
+aliases:
+- /on-life/2018/02/19/notes-on-a-guide-to-the-good-life.html
 ---
 
 This post will outline the first three of the core lessons I took from "A Guide to the Good Life" by William Irvine.
