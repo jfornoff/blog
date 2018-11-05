@@ -6,6 +6,16 @@ aliases:
 - /projects/
 ---
 
+# [Standupbot](#)
+
+Bot that allows you to have asynchronous standup meeting via Slack DM.
+Standups are formatted and posted to a status channel for team members and managers to see.
+Every user can configure his standup time independently.
+
+- [Meetup presentation](https://docs.google.com/presentation/d/1EwYcrZ7avlwdU9C6yntaoqN5ANCbapg_Gp7QJqb5ACo/edit?usp=sharing)
+- Written in Elixir using OTP
+- Deployed to multiple Slack workspaces and in active use every day
+
 # [Multiplayer TicTacToe](https://tictactoe-elm.herokuapp.com/)
 
 Written in Elm and using Phoenix Channels ❤️
