@@ -48,7 +48,7 @@ disqusShortname = "jfornoff-blog"
     exponeaTrackVisits = false
 
 [Permalinks]
-    post = "/:year/:month/:day/:filename/"
+    post = "/:year/:month/:day/:slug/"
 
 [[menu.main]]
     name = "Home"
