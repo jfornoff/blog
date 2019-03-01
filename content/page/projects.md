@@ -6,6 +6,11 @@ aliases:
 - /projects/
 ---
 
+# [Gitctx](https://github.com/jfornoff/gitctx)
+
+CLI tool (written in Go) that allows to have multiple profiles of Git committer information (i.e., name & email address).
+You can then configure on a per-project basis which of these profiles to use.
+
 # [Standupbot](#)
 
 Bot that allows you to have asynchronous standup meeting via Slack DM.
