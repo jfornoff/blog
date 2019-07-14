@@ -138,6 +138,6 @@ Firstly, dividing the hash ring space **evenly** between all servers is not inhe
 
 Lastly, the problem considered above is **web caching**. The distribution provided by consistent hashing also proves useful
 for distributed storage systems (i.e., storage systems where you cannot fit the data set onto a single machine).
-The division of a dataset between computers is then called *sharding*. Adding and removing shards benefits from consistent hashing as well, since it minimizes the data that needs to transferred between shards to keep the data base consistent. (Interesting papers: [2](https://arxiv.org/abs/1406.2294))
+The division of a dataset between computers is then called *sharding*. Adding and removing shards benefits from consistent hashing as well, since it minimizes the data that needs to transferred between shards to keep the data base consistent. (Interesting paper: [2](https://arxiv.org/abs/1406.2294))
 
 But this is a topic for another post. Bye!
