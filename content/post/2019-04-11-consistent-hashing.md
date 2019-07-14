@@ -82,7 +82,7 @@ Can we do better than this? Well of course we can!
 
 # Consistent hashing
 Consistent hashing provides us a more stable way of dividing requests in the face of changing
-server pools.
+server pools (original paper for those interested: [1](https://www.akamai.com/us/en/multimedia/documents/technical-publication/consistent-hashing-and-random-trees-distributed-caching-protocols-for-relieving-hot-spots-on-the-world-wide-web-technical-publication.pdf)).
 
 Here is how it generally works:
 
@@ -134,10 +134,10 @@ Consistent hashing allows for more robust reassignment semantics when spreading 
 across a dynamic set of servers. While slightly more complicated to implement, it's still fairly simple.
 
 Closing off, I want to note two more things.
-Firstly, dividing the hash ring space **evenly** between all servers is not inherently solved by consistent hashing. One approach that alleviates the problem is replicating servers to multiple points on the hash ring, but it is worth having in mind while considering the method.
+Firstly, dividing the hash ring space **evenly** between all servers is not inherently solved by consistent hashing. One approach that alleviates the problem is replicating servers to multiple points on the hash ring, this comes with the drawback of multiplying memory usage.
 
 Lastly, the problem considered above is **web caching**. The distribution provided by consistent hashing also proves useful
 for distributed storage systems (i.e., storage systems where you cannot fit the data set onto a single machine).
-The division of a dataset between computers is then called *sharding*. Adding and removing shards benefits from consistent hashing as well, since it minimizes the data that needs to transferred between shards to keep the data base consistent.
+The division of a dataset between computers is then called *sharding*. Adding and removing shards benefits from consistent hashing as well, since it minimizes the data that needs to transferred between shards to keep the data base consistent. (Interesting papers: [2](https://arxiv.org/abs/1406.2294))
 
 But this is a topic for another post. Bye!
